@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>Maximum and Minimum Values of an Array</title>
+<script>
+function maxandminarray()
+{
+    var array1 = [];
+    var length1 = parseInt(document.getElementById("num").value);
+    for(var i=0;i<length1;i++)
+    {
+        array1[i]=prompt("Enter Value of Array["+i+"]");
+    }
+    array1.sort();
+    array1.reverse();
+    document.getElementById("res1").value = array1[0];
+    document.getElementById("res2").value = array1[length1-1];
+}
+</script>
+<style>
+h2
+{
+    text-align:center;
+    color:chocolate;
+    background-color:aqua;
+}
+table,th,td
+{
+    border: 1px solid black;
+}
+table
+{
+    width:80%;
+    border-collapse: collapse;
+}
+td
+{
+	align-items: center;
+    text-align:center;
+}
+button
+{
+	color: #B22222;
+  	background-color:#DAA520;
+  	border-radius: 50px;
+  	height: 2em;
+  	width: 7em;
+  	font-size:medium;
+  	font-weight: 200;
+	cursor: pointer;
+}
+button:hover
+{
+  background-color: #66ffcc;
+}
+</style>
+</head>
+<body>
+<h2>Javascript Operations</h2>
+<center>
+<table>
+    <tr>
+        <th>Operation</th>
+        <th colspan="2">Inputs</th>
+        <th>Calculation</th>
+        <th>Result</th>
+    </tr>
+    <tr>
+        <th>Maximum Value of an Arrray</th>
+        <td rowspan ="2" colspan="2"><input type="number" name="num" id="num" placeholder="Length of Array"></td>
+        <td rowspan ="2" ><button onclick="maxandminarray();">Calculate</button></td>
+        <td><input type="number" name="res1" id="res1"></td>
+    </tr>
+    <tr>
+        <th>Minimum Value of an Arrray</th>
+        <td><input type="number" name="res2" id="res2"></td>
+    </tr>
+</table>
+</center>
+</body>
+</html>

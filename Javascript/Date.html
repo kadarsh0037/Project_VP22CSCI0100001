@@ -1,0 +1,283 @@
+<html>
+<head>
+<title>Date Object Operations</title>
+<style>
+h2
+{
+    text-align:center;
+    color:chocolate;
+    background-color:aqua;
+}
+table,th,td
+{
+    border: 1px solid black;
+}
+table
+{
+    width:50%;
+    border-collapse: collapse;
+}
+td
+{
+    text-align:center;
+}
+button
+{
+	color: #B22222;
+  	background-color:#DAA520;
+  	border-radius: 50px;
+  	height: 2em;
+  	width: 7em;
+  	font-size:medium;
+  	font-weight: 200;
+	cursor: pointer;
+}
+button:hover 
+{
+    background-color: #66ffcc;
+}
+</style>
+<script type="text/javascript">
+function date1()
+{
+    var d1 = new Date();
+    document.getElementById("res1").value=d1;
+}
+function date2()
+{
+    var d2 = new Date();
+    document.getElementById("res2").value=d2.getDate();
+}
+function date3()
+{
+    var d3 = new Date();
+    document.getElementById("res3").value=d3.getDay();
+}
+function date4()
+{
+    var d4 = new Date();
+    document.getElementById("res4").value=d4.getMonth();
+}
+function date5()
+{
+    var d5 = new Date();
+    document.getElementById("res5").value=d5.getFullYear();
+}
+function date6()
+{
+    var d6 = new Date();
+    var h = d6.getHours();  
+    var m = d6.getMinutes();  
+    var s = d6.getSeconds();  
+    var ms = d6.getMilliseconds();
+    document.getElementById("res6").value=h+":"+m+":"+s+":"+ms;
+}
+function date7()
+{
+    var d7 = new Date();
+    document.getElementById("res7").value=d7.getMilliseconds();
+}
+function date8()
+{
+    var d8 = new Date();
+    document.getElementById("res8").value=d8.getSeconds();
+}
+function date9()
+{
+    var d9 = new Date();
+    document.getElementById("res9").value=d9.getMinutes();
+}
+function date10()
+{
+    var d10 = new Date();
+    document.getElementById("res10").value=d10.getHours();
+}
+function date11()
+{
+    var d11 = new Date();
+    document.getElementById("res11").value=d11.getUTCDate();
+}
+function date12()
+{
+    var d12 = new Date();
+    document.getElementById("res12").value=d12.getUTCDay();
+}
+function date13()
+{
+    var d13 = new Date();
+    document.getElementById("res13").value=d13.getUTCMonth();
+}
+function date14()
+{
+    var d14 = new Date();
+    document.getElementById("res14").value=d14.getUTCFullYear();
+}
+function date15()
+{
+    var d15 = new Date();
+    var h = d15.getUTCHours();  
+    var m = d15.getUTCMinutes();  
+    var s = d15.getUTCSeconds(); 
+    var ms = d15.getUTCMilliseconds();  
+    document.getElementById("res15").value=h+":"+m+":"+s+":"+ms;
+}
+function date16()
+{
+    var d16 = new Date();
+    document.getElementById("res16").value=d16.getUTCMilliseconds();
+}
+function date17()
+{
+    var d17 = new Date();
+    document.getElementById("res17").value=d17.getUTCSeconds();
+}
+function date18()
+{
+    var d18 = new Date();
+    document.getElementById("res18").value=d18.getUTCMinutes();
+}
+function date19()
+{
+    var d19 = new Date();
+    document.getElementById("res19").value=d19.getUTCHours();
+}
+function date20()
+{
+    var d20 = new Date();
+    document.getElementById("res20").value=d20.toJSON();
+}
+function date21()
+{
+    var d21 = new Date();
+    document.getElementById("res21").value=d21.toDateString();
+}
+function date22()
+{
+    var d22 = new Date();
+    document.getElementById("res22").value=d22.toTimeString();
+}
+</script>
+</head>
+<body>
+<h2>Date Operations</h2>
+<center>
+<table>
+<tr>
+    <th>Date Operation</th>
+    <th>Calculation</th>
+    <th>Answer</th>
+</tr>
+<tr>
+    <th>Current Date and Time</th>
+    <td><button onclick="date1()";">Calculate</button></td>
+    <td><input type="text" name="res1" id="res1"></td>
+</tr>
+<tr>
+    <th>Current Date</th>
+    <td><button onclick="date2()";">Calculate</button></td>
+    <td><input type="text" name="res2" id="res2"></td>
+</tr>
+<tr>
+    <th>Current Day</th>
+    <td><button onclick="date3()";">Calculate</button></td>
+    <td><input type="text" name="res3" id="res3"></td>
+</tr>
+<tr>
+    <th>Current Month</th>
+    <td><button onclick="date4()";">Calculate</button></td>
+    <td><input type="text" name="res4" id="res4"></td>
+</tr>
+<tr>
+    <th>Current Year</th>
+    <td><button onclick="date5()";">Calculate</button></td>
+    <td><input type="text" name="res5" id="res5"></td>
+</tr>
+<tr>
+    <th>Current Time</th>
+    <td><button onclick="date6()";">Calculate</button></td>
+    <td><input type="text" name="res6" id="res6"></td>
+</tr>
+<tr>
+    <th>Current Milliseconds</th>
+    <td><button onclick="date7()";">Calculate</button></td>
+    <td><input type="text" name="res7" id="res7"></td>
+</tr>
+<tr>
+    <th>Current Seconds</th>
+    <td><button onclick="date8()";">Calculate</button></td>
+    <td><input type="text" name="res8" id="res8"></td>
+</tr>
+<tr>
+    <th>Current Minutes</th>
+    <td><button onclick="date9()";">Calculate</button></td>
+    <td><input type="text" name="res9" id="res9"></td>
+</tr>
+<tr>
+    <th>Current Hours</th>
+    <td><button onclick="date10()";">Calculate</button></td>
+    <td><input type="text" name="res10" id="res10"></td>
+</tr>
+<tr>
+    <th>Current UTC Date</th>
+    <td><button onclick="date11()";">Calculate</button></td>
+    <td><input type="text" name="res11" id="res11"></td>
+</tr>
+<tr>
+    <th>Current UTC Day</th>
+    <td><button onclick="date12()";">Calculate</button></td>
+    <td><input type="text" name="res12" id="res12"></td>
+</tr>
+<tr>
+    <th>Current UTC Month</th>
+    <td><button onclick="date13()";">Calculate</button></td>
+    <td><input type="text" name="res13" id="res13"></td>
+</tr>
+<tr>
+    <th>Current UTC Year</th>
+    <td><button onclick="date14()";">Calculate</button></td>
+    <td><input type="text" name="res14" id="res14"></td>
+</tr>
+<tr>
+    <th>Current UTC Time</th>
+    <td><button onclick="date15()";">Calculate</button></td>
+    <td><input type="text" name="res15" id="res15"></td>
+</tr>
+<tr>
+    <th>Current UTC Milliseconds</th>
+    <td><button onclick="date16()";">Calculate</button></td>
+    <td><input type="text" name="res16" id="res16"></td>
+</tr>
+<tr>
+    <th>Current UTC Seconds</th>
+    <td><button onclick="date17()";">Calculate</button></td>
+    <td><input type="text" name="res17" id="res17"></td>
+</tr>
+<tr>
+    <th>Current UTC Minutes</th>
+    <td><button onclick="date18()";">Calculate</button></td>
+    <td><input type="text" name="res18" id="res18"></td>
+</tr>
+<tr>
+    <th>Current UTC Hours</th>
+    <td><button onclick="date19()";">Calculate</button></td>
+    <td><input type="text" name="res19" id="res19"></td>
+</tr>
+<tr>
+    <th>Current Date in JSON Format</th>
+    <td><button onclick="date20()";">Calculate</button></td>
+    <td><input type="text" name="res20" id="res20"></td>
+</tr>
+<tr>
+    <th>Current Date in String Format</th>
+    <td><button onclick="date21()";">Calculate</button></td>
+    <td><input type="text" name="res21" id="res21"></td>
+</tr>
+<tr>
+    <th>Current Time in String Format</th>
+    <td><button onclick="date22()";">Calculate</button></td>
+    <td><input type="text" name="res22" id="res22"></td>
+</tr>
+</table>
+</center>
+</body>
+</html>

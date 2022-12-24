@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>Number or Character</title>
+<style>
+h2
+{
+    text-align:center;
+    color:chocolate;
+    background-color:aqua;
+}
+table,th,td
+{
+    border: 1px solid black;
+}
+table
+{
+    width:80%;
+    border-collapse: collapse;
+}
+td
+{
+    text-align:center;
+}
+button
+{
+    color: #B22222;
+        background-color:#DAA520;
+        border-radius: 50px;
+        height: 2em;
+        width: 7em;
+        font-size:medium;
+        font-weight: 200;
+    cursor: pointer;
+}
+button:hover 
+{
+    background-color: #66ffcc;
+}
+</style>
+<script>
+function character()
+{
+	var input = document.getElementById("ch").value;
+    var res;
+    var special = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    if(((input >= 'a')&&(input <= 'z'))||((input >= 'A')&&(input <= 'Z')))
+    {
+        res = "Character";
+    }
+    else if(special.test(input) == true)
+    {
+    	res = "Special Character";
+    }
+    else if(Number.isNaN(input) == false)
+    {
+    	res = "Number";
+    }
+    document.getElementById("res").value = res;
+}
+</script>
+</head>
+<body>
+<h2>Javascript Operations</h2>
+<center>
+<table>
+    <tr>
+        <th>Operation</th>
+        <th colspan="2">Inputs</th>
+        <th>Calculation</th>
+        <th>Result</th>
+    </tr>
+    <tr>
+        <th>Number or Character</th>
+        <td colspan="2"><input type="text" name="ch" id="ch" placeholder="Character"></td>
+        <td><button onclick="character();">Calculate</button></td>
+        <td><input type="text" name="res" id="res"></td>
+    </tr>
+</table>
+</center>
+</body>
+</html>

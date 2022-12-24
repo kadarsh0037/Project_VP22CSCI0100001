@@ -1,0 +1,243 @@
+<html>
+<head>
+<title>String Object Operations</title>
+<style>
+h2
+{
+    text-align:center;
+    color:chocolate;
+    background-color:aqua;
+}
+table,th,td
+{
+    border: 1px solid black;
+}
+table
+{
+    width:80%;
+    border-collapse: collapse;
+}
+td
+{
+    align-items: center;
+    text-align:center;
+}
+button
+{
+    color: #B22222;
+        background-color:#DAA520;
+        border-radius: 50px;
+        height: 2em;
+        width: 7em;
+        font-size:medium;
+        font-weight: 200;
+    cursor: pointer;
+}
+button:hover
+{
+    background-color: #66ffcc;
+}
+</style>
+<script type="text/javascript">
+function  func1()
+{
+    var String1 = document.getElementById("str1").value;
+    var Char1 = document.getElementById("char1").value;
+    var res1 = String1.indexOf(Char1);
+    document.getElementById("res1").value=res1;
+}
+function  func2()
+{
+    var String2 = document.getElementById("str2").value;
+    var Index2 = parseInt(document.getElementById("ind2").value);
+    var res2 = String2.charAt(Index2);
+    document.getElementById("res2").value=res2;
+}
+function  func3()
+{
+    var String3 = document.getElementById("str3").value;
+    var Index3 = parseInt(document.getElementById("ind3").value);
+    var res3 = String3.charCodeAt(Index3);
+    document.getElementById("res3").value=res3;
+}
+function  func4()
+{
+    var String4 = document.getElementById("str4").value;
+    var res4 = String4.toLowerCase();
+    document.getElementById("res4").value=res4;
+}
+function  func5()
+{
+    var String5 = document.getElementById("str5").value;
+    var res5 = String5.toUpperCase();
+    document.getElementById("res5").value=res5;
+}
+function  func6()
+{
+    var String6 = document.getElementById("str6").value;
+    var String7 = document.getElementById("str7").value;
+    var res6 = String6.concat(String7);
+    document.getElementById("res6").value=res6;
+}
+function func7()
+{
+    var String8 = document.getElementById("str8").value;
+    var Char2 = document.getElementById("char2").value;
+    var res7 = String8.lastIndexOf(Char2);
+    document.getElementById("res7").value=res7;
+}
+function func8()
+{
+    var String9 = document.getElementById("str9").value;
+    var RegExp1 = document.getElementById("regexp1").value;
+    var res8 = String9.search(RegExp1);
+    document.getElementById("res8").value=res8;
+}
+function func9()
+{
+    var String10 = document.getElementById("str10").value;
+    var RegExp2 = document.getElementById("regexp2").value;
+    var res9 = String10.match(RegExp2);
+    document.getElementById("res9").value=res9;
+}
+function func10()
+{
+    var String11 = document.getElementById("str11").value;
+    var SubString1 = document.getElementById("substr1").value;
+    var SubString2 = document.getElementById("substr2").value;
+    var res10 = String11.replace(SubString1,SubString2);
+    document.getElementById("res10").value=res10;
+}
+function func11()
+{
+    var String12 = document.getElementById("str12").value;
+    var Index4 = parseInt(document.getElementById("ind4").value);
+    var Index5 = parseInt(document.getElementById("ind5").value);
+    var res11 = String12.substring(Index4,Index5);
+    document.getElementById("res11").value=res11;
+}
+function func12()
+{
+    var String13 = document.getElementById("str13").value;
+    var Index6 = parseInt(document.getElementById("ind6").value);
+    var Length1 = parseInt(document.getElementById("len1").value);
+    var res12 = String13.substr(Index6,Length1);
+    document.getElementById("res12").value=res12;
+}
+function func13()
+{
+    var String14 = str14.value;
+    var Index7 = parseInt(document.getElementById("ind7").value);
+    var Index8 = parseInt(document.getElementById("ind8").value);
+    var res13 = String14.slice(Index7,Index8);
+    document.getElementById("res13").value=res13;
+}
+</script>
+</head>
+<body>
+<h2>String Operations</h2>
+<center>
+<table>
+    <tr>
+        <th>String Operation</th>
+        <th colspan="3">Inputs</th>
+        <th>Calculation</th>
+        <th>Answer</th>
+    </tr>
+    <tr>
+        <th>Position of a Character in a String</th>
+        <td colspan="2"><input type="text" name="str1" id="str1" placeholder="String"></td>
+        <td><input type="text" name="char1" id="char1" placeholder="Character"></td>
+        <td><button onclick="func1();">Calculate</button></td>
+        <td><input type="text" name="res1" id="res1"></td>
+    </tr>
+    <tr>
+        <th>Character at Specific Location</th>
+        <td colspan="2"><input type="text" name="str2" id="str2" placeholder="String"></td>
+        <td><input type="number" name="ind2" id="ind2" placeholder="Index"></td>
+        <td><button onclick="func2();">Calculate</button></td>
+        <td><input type="text" name="res2" id="res2"></td>
+    </tr>
+    <tr>
+        <th>Unicode value of Character at Specific Location</th>
+        <td colspan="2"><input type="text" name="str3" id="str3" placeholder="String"></td>
+        <td><input type="number" name="ind3" id="ind3" placeholder="Index"></td>
+        <td><button onclick="func3();">Calculate</button></td>
+        <td><input type="text" name="res3" id="res3"></td>
+    </tr>
+    <tr>
+        <th>String in Lower Case</th>
+        <td colspan="3"><input type="text" name="str4" id="str4" placeholder="String"></td>
+        <td><button onclick="func4();">Calculate</button></td>
+        <td><input type="text" name="res4" id="res4"></td>
+    </tr>
+    <tr>
+        <th>String in Upper Case</th>
+        <td colspan="3"><input type="text" name="str5" id="str5" placeholder="String"></td>
+        <td><button onclick="func5();">Calculate</button></td>
+        <td><input type="text" name="res5" id="res5"></td>
+    </tr>
+    <tr>
+        <th>Concatenate two Strings</th>
+        <td colspan="2"><input type="text" name="str6" id="str6" placeholder="String 1"></td>
+        <td><input type="text" name="str7" id="str7" placeholder="String 2"></td>
+        <td><button onclick="func6();">Calculate</button></td>
+        <td><input type="text" name="res6" id="res6"></td>
+    </tr>
+    <tr>
+        <th>Last Position of a Character in a String</th>
+        <td colspan="2"><input type="text" name="str8" id="str8" placeholder="String"></td>
+        <td><input type="text" name="char2" id="char2" placeholder="Character"></td>
+        <td><button onclick="func7();">Calculate</button></td>
+        <td><input type="text" name="res7" id="res7"></td>
+    </tr>
+    <tr>
+        <th>Searching a String</th>
+        <td colspan="2"><input type="text" name="str9" id="str9"placeholder="String"></td>
+        <td><input type="text" name="regexp1" id="regexp1" placeholder="Regular Expression"></td>
+        <td><button onclick="func8();">Calculate</button></td>
+        <td><input type="text" name="res8" id="res8"></td>
+    </tr>
+    <tr>
+        <th>String Match</th>
+        <td colspan="2"><input type="text" name="str10" id="str10" placeholder="String"></td>
+        <td><input type="text" name="regexp2" id="regexp2" placeholder="Regular Expression"></td>
+        <td><button onclick="func9();">Calculate</button></td>
+        <td><input type="text" name="res9" id="res9"></td>
+    </tr>
+    <tr>
+        <th>String Replace</th>
+        <td><input type="text" name="str11" id="str11" placeholder="String"></td>
+        <td><input type="text" name="substr1" id="substr1" placeholder="Sub String 1"></td>
+        <td><input type="text" name="substr2" id="substr2" placeholder="Sub String 2"></td>
+        <td><button onclick="func10();">Calculate</button></td>
+        <td><input type="text" name="res10" id="res10"></td>
+    </tr>
+    <tr>
+        <th>Substring based on Indexes</th>
+        <td><input type="text" name="str12" id="str12" placeholder="String"></td>
+        <td><input type="number" name="ind4" id="ind4" placeholder="Starting Index"></td>
+        <td><input type="number" name="ind5" id="ind5" placeholder="Ending Index"></td>
+        <td><button onclick="func11();">Calculate</button></td>
+        <td><input type="text" name="res11" id="res11"></td>
+    </tr>
+    <tr>
+        <th>Substring based on Length</th>
+        <td><input type="text" name="str13" id="str13" placeholder="String"></td>
+        <td><input type="number" name="ind6" id="ind6" placeholder="Starting Index"></td>
+        <td><input type="number" name="len1" id="len1" placeholder="Length"></td>
+        <td><button onclick="func12();">Calculate</button></td>
+        <td><input type="text" name="res12" id="res12"></td>
+    </tr>
+    <tr>
+        <th>Slicing a String</th>
+        <td><input type="text" name="str14" id="str14" placeholder="String"></td>
+        <td><input type="number" name="ind7" id="ind7" placeholder="Starting Index"></td>
+        <td><input type="number" name="ind8" id="ind8" placeholder="Ending Index"></td>
+        <td><button onclick="func13();">Calculate</button></td>
+        <td><input type="text" name="res13" id="res13"></td>
+    </tr>
+</table>
+</center>
+</body>
+</html>

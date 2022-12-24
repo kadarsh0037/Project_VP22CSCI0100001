@@ -1,0 +1,458 @@
+<html>
+<head>
+<title>Javascript Operators</title>
+<style>
+h1
+{
+ 	color:crimson;
+ 	font-family:Tahoma;
+}
+h2
+{
+	color:darkorange;
+	font-family:Verdana;
+}
+div
+{
+	border: 3px solid blueviolet;
+	border-style: dotted;
+	width: 80%;
+}
+table,td,th
+{
+   border-radius: 4px;
+}
+table
+{
+ width : 50%;
+ border : 3px solid red;
+}
+th
+{
+ border : 2px solid green;
+}
+td
+{
+ border : 2px solid blue;
+ text-align : center;
+}
+button
+{
+	color: #B22222;
+  	background-color:#DAA520;
+  	border-radius: 50px;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	height: 2em;
+  	width: 8em;
+  	font-size: large;
+  	font-weight: 400;
+	cursor: pointer;
+}
+button:hover
+{
+  background-color: #66ffcc;
+}
+</style>
+<script>
+function function1()
+{
+	var number1 = parseInt(document.getElementById("num1").value);
+	var number2 = parseInt(document.getElementById("num2").value);
+	var operator = document.getElementById("op1").value;
+	switch(operator)
+	{
+		case '+' : var answer = (number1 + number2);
+				break;
+		case '-': var answer = (number1 - number2);
+				break;
+		case '*' : var answer = (number1 * number2);
+				break;
+		case '/': var answer = (number1 / number2);
+				break;
+		case '%': var answer = (number1 % number2);
+				break;		
+	}
+	document.getElementById("ans1").value = answer;
+}
+function function2()
+{
+	var number1 = parseInt(document.getElementById("num3").value);
+	var number2 = parseInt(document.getElementById("num4").value);
+	var operator = document.getElementById("op2").value;
+	switch(operator)
+	{
+		case '<' : var answer = (number1 < number2);
+				break;
+		case '<=': var answer = (number1 <= number2);
+				break;
+		case '>' : var answer = (number1 > number2);
+				break;
+		case '>=': var answer = (number1 >= number2);
+				break;
+		case '==': var answer = (number1 == number2);
+				break;
+		case '!=': var answer = (number1 != number2);
+				break;
+		case '===': var answer = (number1 === number2);
+				break;
+		case '!==': var answer = (number1 !== number2);
+				break;				
+	}
+	document.getElementById("ans2").value = answer;
+}
+function function3()
+{
+	var number1 = parseInt(document.getElementById("num5").value);
+	var number2 = parseInt(document.getElementById("num6").value);
+	var operator = document.getElementById("op3").value;
+	switch(operator)
+	{
+		case '&' : var answer = (number1 & number2);
+				break;
+		case '|': var answer = (number1 | number2);
+				break;
+		case '~' : var answer = (~ number1);
+				break;
+		case '^': var answer = (number1 ^ number2);
+				break;
+		case '<<': var answer = (number1 << number2);
+				break;
+		case '>>': var answer = (number1 >> number2);
+				break;
+	}
+	document.getElementById("ans3").value = answer;
+}
+function function4()
+{
+	var number1 = parseInt(document.getElementById("num7").value);
+	var number2 = parseInt(document.getElementById("num8").value);
+	var number3 = parseInt(document.getElementById("num9").value);
+	var number4 = parseInt(document.getElementById("num10").value);
+	var operator1 = document.getElementById("op4").value;
+	var operator2 = document.getElementById("op5").value;
+	var operator3 = document.getElementById("op6").value;
+	switch(operator1)
+	{
+		case '<' : var condition1 = (number1 < number2);
+				break;
+		case '<=': var condition1 = (number1 <= number2);
+				break;
+		case '>' : var condition1 = (number1 > number2);
+				break;
+		case '>=': var condition1 = (number1 >= number2);
+				break;
+		case '==': var condition1 = (number1 == number2);
+				break;
+		case '!=': var condition1 = (number1 != number2);
+				break;
+		case '===': var condition1 = (number1 === number2);
+				break;
+		case '!==': var condition1 = (number1 !== number2);
+				break;				
+	}
+	switch(operator2)
+	{
+		case '<' : var condition2 = (number3 < number4);
+				break;
+		case '<=': var condition2 = (number3 <= number4);
+				break;
+		case '>' : var condition2 = (number3 > number4);
+				break;
+		case '>=': var condition2 = (number3 >= number4);
+				break;
+		case '==': var condition2 = (number3 == number4);
+				break;
+		case '!=': var condition2 = (number3 != number4);
+				break;
+		case '===': var condition2 = (number3 === number4);
+				break;
+		case '!==': var condition2 = (number3 !== number4);
+				break;				
+	}
+	switch(operator3)
+	{
+		case '&&' : var answer = (condition1 && condition2);
+				break;
+		case '||': var answer = (condition1 || condition2);
+				break;
+		case '!' : var answer = (! condition1);
+				break;
+	}
+	document.getElementById("ans4").value = answer;
+}
+function function5()
+{
+	var number = parseInt(document.getElementById("num11").value);
+	var operator = document.getElementById("op7").value;
+	var answer = 100;
+	switch(operator)
+	{
+		case '=' : answer = number;
+				break;
+		case '+=': answer += number;
+				break;
+		case '-=': answer -= number;
+				break;
+		case '*=': answer *= number;
+				break;
+		case '/=': answer /= number;
+				break;
+		case '%=': answer %= number;
+				break;			
+	}
+	document.getElementById("ans5").value = answer;
+}
+</script>
+</head>
+<body>
+<center>
+<h1 align="center">Javascript Operators</h1>
+<div class="div1">
+<h2 align="center">Arithmetic Operators</h2>
+<table>
+<tr>
+<th>
+<label for="num1">Number 1:</label>
+</th>
+<td>
+<input type="number" name="num1" id="num1" required>
+</td>
+</tr>
+<tr>
+<th>
+<label for="num2">Number 2:</label>
+</th>
+<td>
+<input type="number" name="num2" id="num2" required>
+</td>
+</tr>
+<tr>
+<th>
+<label for="op1">Select Operator:</label>
+</th>
+<td>
+<select name="op1" id="op1" required>
+<option value="+">+</option>
+<option value="-">-</option>
+<option value="*">*</option>
+<option value="/">/</option>
+<option value="%">%</option>
+</select>
+</td>
+</tr>
+<tr>
+<th>
+<label for="ans1">Answer:</label>
+</th>
+<td>
+<input type="number" name="ans1" id="ans1">
+</td>
+</tr>
+</table>
+<br>
+<button name="button" onclick="function1();">Calculate</button><br>
+</div>
+<br>
+<div class="div2">
+<h2 align="center">Relational Operators</h2>
+<table>
+<tr>
+<th>
+<label for="num3">Number 1:</label>
+</th>
+<td>
+<input type="number" name="num3" id="num3" required>
+</td>
+</tr>
+<tr>
+<th>
+<label for="num4">Number 2:</label>
+</th>
+<td>
+<input type="number" name="num4" id="num4" required>
+</td>
+</tr>
+<tr>
+<th>
+<label for="op2">Select Operator:</label>
+</th>
+<td>
+<select name="op2" id="op2" required>
+<option value="<"><</option>
+<option value="<="><=</option>
+<option value=">">></option>
+<option value=">=">>=</option>
+<option value="==">==</option>
+<option value="!=">!=</option>
+<option value="===">===</option>
+<option value="!==">!==</option>
+</select>
+</td>
+</tr>
+<tr>
+<th>
+<label for="ans2">Answer:</label>
+</th>
+<td>
+<input type="text" name="ans2" id="ans2">
+</td>
+</tr>
+</table>
+<br>
+<button name="button" onclick="function2();">Calculate</button><br>
+</div>
+<br>
+<div class="div3">
+<h2 align="center">Bitwise Operators</h2>
+<table>
+<tr>
+<th>
+<label for="num5">Number 1:</label>
+</th>
+<td>
+<input type="number" name="num5" id="num5" required>
+</td>
+</tr>
+<tr>
+<th>
+<label for="num6">Number 2:</label>
+</th>
+<td>
+<input type="number" name="num6" id="num6">
+</td>
+</tr>
+<tr>
+<th>
+<label for="op3">Select Operator:</label>
+</th>
+<td>
+<select name="op3" id="op3" required>
+<option value="&">&</option>
+<option value="|">|</option>
+<option value="~">~</option>
+<option value="^">^</option>
+<option value="<<"><<</option>
+<option value=">>">>></option>
+</select>
+</td>
+</tr>
+<tr>
+<th>
+<label for="ans3">Answer:</label>
+</th>
+<td>
+<input type="number" name="ans3" id="ans3">
+</td>
+</tr>
+</table>
+<br>
+<button name="button" onclick="function3();">Calculate</button><br>
+</div>
+<br>
+<div class="div4">
+<h2 align="center">Logical Operators</h2>
+<table>
+<tr>
+<th>
+<label for="con1">Condition 1:</label>
+</th>
+<td>
+<input type="number" name="num7" id="num7" required>
+<select name="op4" id="op4" required>
+<option value="<"><</option>
+<option value="<="><=</option>
+<option value=">">></option>
+<option value=">=">>=</option>
+<option value="==">==</option>
+<option value="!=">!=</option>
+<option value="===">===</option>
+<option value="!==">!==</option>
+</select>
+<input type="number" name="num8" id="num8" required>
+</td>
+</tr>
+<tr>
+<th>
+<label for="con2">Condition 2:</label>
+</th>
+<td>
+<input type="number" name="num9" id="num9">
+<select name="op5" id="op5" required>
+<option value="<"><</option>
+<option value="<="><=</option>
+<option value=">">></option>
+<option value=">=">>=</option>
+<option value="==">==</option>
+<option value="!=">!=</option>
+<option value="===">===</option>
+<option value="!==">!==</option>
+</select>
+<input type="number" name="num10" id="num10">
+</td>
+</tr>
+<tr>
+<th>
+<label for="op6">Select Operator:</label>
+</th>
+<td>
+<select name="op6" id="op6" required>
+<option value="&&">&&</option>
+<option value="||">||</option>
+<option value="!">!</option>
+</select>
+</td>
+</tr>
+<tr>
+<th>
+<label for="ans">Answer:</label>
+</th>
+<td>
+<input type="text" name="ans4" id="ans4">
+</td>
+</tr>
+</table>
+<br>
+<button name="button" onclick="function4();">Calculate</button>
+<br>
+</div>
+<br>
+<div class="div5">
+<h2 align="center">Assignment Operators</h2>
+<table>
+<tr>
+<th colspan="2">Value = 100</th>
+</tr>
+<tr>
+<th>
+<label for="num11">Value</label>
+</th>
+<td>
+<select name="op7" id="op7" required>
+<option value="=">=</option>
+<option value="+=">+=</option>
+<option value="-=">-=</option>
+<option value="*=">*=</option>
+<option value="/=">/=</option>
+<option value="%=">%=</option>
+</select>
+<input type="number" name="num11" id="num11" required>
+</td>
+</tr>
+<tr>
+<th>
+<label for="ans5">Answer:</label>
+</th>
+<td>
+<input type="number" name="ans5" id="ans5">
+</td>
+</tr>
+</table>
+<br>
+<button name="button" onclick="function5();">Calculate</button>
+<br>
+</div>
+</center>
+</body>
+</html>

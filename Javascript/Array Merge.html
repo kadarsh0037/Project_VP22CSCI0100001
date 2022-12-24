@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Merge two Arrays</title>
+<script>
+function mergearray()
+{
+    var array1 = [];
+    var array2 = [];
+    var array3 = [];
+    var i;
+    var length1 = parseInt(document.getElementById("len1").value);
+    for(i=0;i<length1;i++)
+    {
+        array1[i]=prompt("Enter Value of Array1:");
+    }
+    var length2 = parseInt(document.getElementById("len2").value);
+    for(i=0;i<length2;i++)
+    {
+        array2[i]=prompt("Enter Value of Array2:");
+    }   
+    array3 = array1.concat(array2);
+    document.getElementById("res").value = array3;
+}
+</script>
+<style>
+h2
+{
+    text-align:center;
+    color:chocolate;
+    background-color:aqua;
+}
+table,th,td
+{
+    border: 1px solid black;
+}
+table
+{
+    width:80%;
+    border-collapse: collapse;
+}
+td
+{
+	align-items: center;
+    text-align:center;
+}
+button
+{
+	color: #B22222;
+  	background-color:#DAA520;
+  	border-radius: 50px;
+  	height: 2em;
+  	width: 7em;
+  	font-size:medium;
+  	font-weight: 200;
+	cursor: pointer;
+}
+button:hover
+{
+  background-color: #66ffcc;
+}
+</style>
+</head>
+<body>
+<h2>Javascript Operations</h2>
+<center>
+<table>
+    <tr>
+        <th>Operation</th>
+        <th colspan="2">Inputs</th>
+        <th>Calculation</th>
+        <th>Result</th>
+    </tr>
+    <tr>
+        <th>Merge Two Arrays</th>
+        <td><input type="number" name="len1" id="len1" placeholder="Length of First Array"></td>
+        <td><input type="number" name="len2" id="len2" placeholder="Length of Second Array"></td>
+        <td><button onclick="mergearray();">Calculate</button></td>
+        <td><input type="text" name="res" id="res"></td>
+    </tr>
+</table>
+</center>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>Case Conversion</title>
+<style>
+h2
+{
+    text-align:center;
+    color:chocolate;
+    background-color:aqua;
+}
+table,th,td
+{
+    border: 1px solid black;
+}
+table
+{
+    width:80%;
+    border-collapse: collapse;
+}
+td
+{
+    text-align:center;
+}
+button
+{
+    color: #B22222;
+        background-color:#DAA520;
+        border-radius: 50px;
+        height: 2em;
+        width: 7em;
+        font-size:medium;
+        font-weight: 200;
+    cursor: pointer;
+}
+button:hover 
+{
+    background-color: #66ffcc;
+}
+</style>
+<script>
+function caseconversion()
+{
+	 var char = document.getElementById("ch").value;
+     var res;
+     if((char >= 'a')&&(char <= 'z'))
+     {
+     	res = char.charCodeAt(0);
+     	res -= 32;
+        res = String.fromCharCode(res);
+     }
+     else if((char >= 'A')&&(char <= 'Z'))
+     {
+     	res = char.charCodeAt(0);
+     	res += 32;
+        res = String.fromCharCode(res);
+     }
+     else
+     {
+     	res = "Not a Character";
+     }
+     document.getElementById("res").value = res;
+}
+</script>
+</head>
+<body>
+<h2>Javascript Operations</h2>
+<center>
+<table>
+    <tr>
+        <th>Operation</th>
+        <th colspan="2">Inputs</th>
+        <th>Calculation</th>
+        <th>Result</th>
+    </tr>
+    <tr>
+        <th>Case Conversion</th>
+        <td colspan="2"><input type="text" name="ch" id="ch" placeholder="Character"></td>
+        <td><button onclick="caseconversion();">Calculate</button></td>
+        <td><input type="text" name="res" id="res"></td>
+    </tr>
+</table>
+</center>
+</body>
+</html>

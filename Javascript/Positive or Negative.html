@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>Positve Number or Negative Number</title>
+<style>
+h2
+{
+    text-align:center;
+    color:chocolate;
+    background-color:aqua;
+}
+table,th,td
+{
+    border: 1px solid black;
+}
+table
+{
+    width:80%;
+    border-collapse: collapse;
+}
+td
+{
+    text-align:center;
+}
+button
+{
+    color: #B22222;
+        background-color:#DAA520;
+        border-radius: 50px;
+        height: 2em;
+        width: 7em;
+        font-size:medium;
+        font-weight: 200;
+    cursor: pointer;
+}
+button:hover 
+{
+    background-color: #66ffcc;
+}
+</style>
+<script>
+function positiveornegative()
+{
+	var num = parseInt(document.getElementById("num").value);
+    var res;
+    if(num > 0)
+    {
+    	res = "Positive Number"
+	}
+    else if(num < 0)
+    {
+    	res = "Negative Number";
+    }
+    else
+    {
+    	res = "Zero";
+    }
+    document.getElementById("res").value = res;
+}
+</script>
+</head>
+<body>
+<h2>Javascript Operations</h2>
+<center>
+<table>
+    <tr>
+        <th>Operation</th>
+        <th colspan="2">Inputs</th>
+        <th>Calculation</th>
+        <th>Result</th>
+    </tr>
+    <tr>
+        <th>Positve Number or Negative Number</th>
+        <td colspan="2"><input type="number" name="num" id="num" placeholder="Number"></td>
+        <td><button onclick="positiveornegative();">Calculate</button></td>
+        <td><input type="text" name="res" id="res"></td>
+    </tr>
+</table>
+</center>
+</body>
+</html>

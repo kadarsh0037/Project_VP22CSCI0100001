@@ -1,0 +1,345 @@
+<html>
+<head>
+<title>Math Object Operations</title>
+<style>
+h2
+{
+    text-align:center;
+    color:chocolate;
+    background-color:aqua;
+}
+table,th,td
+{
+    border: 1px solid black;
+}
+table
+{
+    width:80%;
+    border-collapse: collapse;
+}
+td
+{
+    align-items: center;
+    text-align:center;
+}
+button
+{
+    color: #B22222;
+        background-color:#DAA520;
+        border-radius: 50px;
+        height: 2em;
+        width: 7em;
+        font-size:medium;
+        font-weight: 200;
+    cursor: pointer;
+}
+button:hover
+{
+    background-color: #66ffcc;
+}
+</style>
+<script type="text/javascript">
+function math1()
+{
+    var number1 = document.getElementById("num1").value;
+    res1 = Math.abs(number1);
+    document.getElementById("res1").value=res1;
+}
+function math2()
+{
+    var number2 = document.getElementById("num2").value;
+    res2 = Math.sin(number2);
+    document.getElementById("res2").value=res2;
+}
+function math3()
+{
+    var number3 = document.getElementById("num3").value;
+    res3 = Math.asin(number3);
+    document.getElementById("res3").value=res3;
+}
+function math4()
+{
+    var number4 = document.getElementById("num4").value;
+    res4 = Math.sinh(number4);
+    document.getElementById("res4").value=res4;
+}
+function math5()
+{
+    var number5 = document.getElementById("num5").value;
+    res5 = Math.cos(number5);
+    document.getElementById("res5").value=res5;
+}
+function math6()
+{
+    var number6 = document.getElementById("num6").value;
+    res6 = Math.acos(number6);
+    document.getElementById("res6").value=res6;
+}
+function math7()
+{
+    var number7 = document.getElementById("num7").value;
+    res7 = Math.cosh(number7);
+    document.getElementById("res7").value=res7;
+}
+function math8()
+{
+    var number8 = document.getElementById("num8").value;
+    res8 = Math.tan(number8);
+    document.getElementById("res8").value=res8;
+}
+function math9()
+{
+    var number9 = document.getElementById("num9").value;
+    res9 = Math.atan(number9);
+    document.getElementById("res9").value=res9;
+}
+function math10()
+{
+    var number10 = document.getElementById("num10").value;
+    res10 = Math.tanh(number10);
+    document.getElementById("res10").value=res10;
+}
+function math11()
+{
+    var number11 = document.getElementById("num11").value;
+    res11 = Math.sign(number11);
+    document.getElementById("res11").value=res11;
+}
+function math12()
+{
+    var number12 = document.getElementById("num12").value;
+    res12 = Math.sqrt(number12);
+    document.getElementById("res12").value=res12;
+}
+function math13()
+{
+    var number13 = document.getElementById("num13").value;
+    res13 = Math.cbrt(number13);
+    document.getElementById("res13").value=res13;
+}
+function math14()
+{
+    var number14 = document.getElementById("num14").value;
+    res14 = Math.trunc(number14);
+    document.getElementById("res14").value=res14;
+}
+function math15()
+{
+    var number15 = document.getElementById("num15").value;
+    res15 = Math.round(number15);
+    document.getElementById("res15").value=res15;
+}
+function math16()
+{
+    var number16 = document.getElementById("num16").value;
+    res16 = Math.log(number16);
+    document.getElementById("res16").value=res16;
+}
+function math17()
+{
+    var number17 = document.getElementById("num17").value;
+    res17 = Math.ceil(number17);
+    document.getElementById("res17").value=res17;
+}
+function math18()
+{
+    var number18 = document.getElementById("num18").value;
+    res18 = Math.ceil(number18);
+    document.getElementById("res18").value=res18;
+}
+function math19()
+{
+    var number19 = document.getElementById("num19").value;
+    res19 = Math.floor(number19);
+    document.getElementById("res19").value=res19;
+}
+function math20()
+{
+    var number20 = document.getElementById("num20").value;
+    var number21 = document.getElementById("num21").value;
+    res20 = Math.pow(number20,number21);
+    document.getElementById("res20").value=res20;
+}
+function math21()
+{
+    res21 = Math.random();
+    document.getElementById("res21").value=res21;
+}
+function math22()
+{
+    array1 = [];
+    length1 = parseInt(document.getElementById("num22").value);
+    for(var i=0;i<length1;i++)
+    {
+        array1[i]=prompt("Enter Value "+(i+1));
+    }
+    res22 = Math.max(...array1);
+    document.getElementById("res22").value=res22;
+}
+function math23()
+{
+    array2 = [];
+    length2 = parseInt(document.getElementById("num23").value);
+    for(var i=0;i<length2;i++)
+    {
+        array2[i]=prompt("Enter Value "+(i+1));
+    }
+    res23 = Math.min(...array2);
+    document.getElementById("res23").value=res23;
+}
+</script>
+</head>
+<body>
+<h2>Math Operations</h2>
+<center>
+<table>
+    <tr>
+        <th>Math Operation</th>
+        <th colspan="2">Inputs</th>
+        <th>Calculation</th>
+        <th>Answer</th>
+    </tr>
+    <tr>
+        <th>Absolute Value of a Number</th>
+        <td colspan="2"><input type="number" name="num1" id="num1" step="any" placeholder="Number"></td>
+        <td><button onclick="math1();">Calculate</button></td>
+        <td><input type="number" name="res1" id="res1"></td>
+    </tr>
+    <tr>
+        <th>Sine of a Number</th>
+        <td colspan="2"><input type="number" name="num2" id="num2" step="any" placeholder="Number"></td>
+        <td><button onclick="math2();">Calculate</button></td>
+        <td><input type="number" name="res2" id="res2"></td>
+    </tr>
+    <tr>
+        <th>Arc Sine of a Number</th>
+        <td colspan="2"><input type="number" name="num3" id="num3" step="any" placeholder="Number"></td>
+        <td><button onclick="math3();">Calculate</button></td>
+        <td><input type="number" name="res3" id="res3"></td>
+    </tr>
+    <tr>
+        <th>Hyperbolic Sine of a Number</th>
+        <td colspan="2"><input type="number" name="num4" id="num4" step="any" placeholder="Number"></td>
+        <td><button onclick="math4();">Calculate</button></td>
+        <td><input type="number" name="res4" id="res4"></td>
+    </tr>
+    <tr>
+        <th>Cosine of a Number</th>
+        <td colspan="2"><input type="number" name="num5" id="num5" step="any" placeholder="Number"></td>
+        <td><button onclick="math5();">Calculate</button></td>
+        <td><input type="number" name="res5" id="res5"></td>
+    </tr>
+    <tr>
+        <th>Arc Cosine of a Number</th>
+        <td colspan="2"><input type="number" name="num6" id="num6" step="any" placeholder="Number"></td>
+        <td><button onclick="math6();">Calculate</button></td>
+        <td><input type="number" name="res6" id="res6"></td>
+    </tr>
+    <tr>
+        <th>Hyperbolic Cosine of a Number</th>
+        <td colspan="2"><input type="number" name="num7" id="num7" step="any" placeholder="Number"></td>
+        <td><button onclick="math7();">Calculate</button></td>
+        <td><input type="number" name="res7" id="res7"></td>
+    </tr>
+    <tr>
+        <th>Tangent of a Number</th>
+        <td colspan="2"><input type="number" name="num8" id="num8" step="any" placeholder="Number"></td>
+        <td><button onclick="math8();">Calculate</button></td>
+        <td><input type="number" name="res8" id="res8"></td>
+    </tr>
+    <tr>
+        <th>Arc Tangent of a Number</th>
+        <td colspan="2"><input type="number" name="num9" id="num9" step="any" placeholder="Number"></td>
+        <td><button onclick="math9();">Calculate</button></td>
+        <td><input type="number" name="res9" id="res9"></td>
+    </tr>
+    <tr>
+        <th>Hyperbolic Tangent of a Number</th>
+        <td colspan="2"><input type="number" name="num10" id="num10" step="any" placeholder="Number"></td>
+        <td><button onclick="math10();">Calculate</button></td>
+        <td><input type="number" name="res10" id="res10"></td>
+    </tr>
+    <tr>
+        <th>Sign of a Number</th>
+        <td colspan="2"><input type="number" name="num11" id="num11" step="any" placeholder="Number"></td>
+        <td><button onclick="math11();">Calculate</button></td>
+        <td><input type="number" name="res11" id="res11"></td>
+    </tr>
+    <tr>
+        <th>Sqaure Root of a Number</th>
+        <td colspan="2"><input type="number" name="num12" id="num12" step="any" placeholder="Number"></td>
+        <td><button onclick="math12();">Calculate</button></td>
+        <td><input type="number" name="res12" id="res12"></td>
+    </tr>
+    <tr>
+        <th>Cube Root of a Number</th>
+        <td colspan="2"><input type="number" name="num13" id="num13" step="any" placeholder="Number"></td>
+        <td><button onclick="math13();">Calculate</button></td>
+        <td><input type="number" name="res13" id="res13"></td>
+    </tr>
+    <tr>
+        <th>Trunc of a Number</th>
+        <td colspan="2"><input type="number" name="num14" id="num14" step="any" placeholder="Number"></td>
+        <td><button onclick="math14();">Calculate</button></td>
+        <td><input type="number" name="res14" id="res14"></td>
+    </tr>
+    <tr>
+        <th>Rounded Value of a Number</th>
+        <td colspan="2"><input type="number" name="num15" id="num15" step="any" placeholder="Number"></td>
+        <td><button onclick="math15();">Calculate</button></td>
+        <td><input type="number" name="res15" id="res15"></td>
+    </tr>
+    <tr>
+        <th>Logarithm of a Number</th>
+        <td colspan="2"><input type="number" name="num16" id="num16" step="any" placeholder="Number"></td>
+        <td><button onclick="math16();">Calculate</button></td>
+        <td><input type="number" name="res16" id="res16"></td>
+    </tr>
+    <tr>
+        <th>Ceil Value of a Number</th>
+        <td colspan="2"><input type="number" name="num17" id="num17" step="any" placeholder="Number"></td>
+        <td><button onclick="math17();">Calculate</button></td>
+        <td><input type="number" name="res17" id="res17"></td>
+    </tr>
+    <tr>
+        <th>Exponential Form of a Number</th>
+        <td colspan="2"><input type="number" name="num18" id="num18" step="any" placeholder="Number"></td>
+        <td><button onclick="math18();">Calculate</button></td>
+        <td><input type="number" name="res18" id="res18"></td>
+    </tr>
+    <tr>
+        <th>Floor Value of a Number</th>
+        <td colspan="2"><input type="number" name="num19" id="num19" step="any" placeholder="Number"></td>
+        <td><button onclick="math19();">Calculate</button></td>
+        <td><input type="number" name="res19" id="res19"></td>
+    </tr>
+    <tr>
+        <th>Power of a Number</th>
+        <td><input type="number" name="num20" id="num20" step="any" placeholder="Number"></td>
+        <td><input type="number" name="num21" id="num21" step="any" placeholder="Number"></td>
+        <td><button onclick="math20();">Calculate</button></td>
+        <td><input type="number" name="res20" id="res20"></td>
+    </tr>
+    <tr>
+        <th>Random Number</th>
+        <td colspan="2"></td>
+        <td><button onclick="math21();">Calculate</button></td>
+        <td><input type="number" name="res21" id="res21"></td>
+    </tr>
+    <tr>
+        <th>Maximum Value</th>
+        <td colspan="2"><input type="number" name="num22" id="num22" step="any" placeholder="Count"></td>
+        <td><button onclick="math22();">Calculate</button></td>
+        <td><input type="number" name="res22" id="res22"></td>
+    </tr>
+    <tr>
+        <th>Minimum Value</th>
+        <td colspan="2"><input type="number" name="num23" id="num23" step="any" placeholder="Count"></td>
+        <td><button onclick="math23();">Calculate</button></td>
+        <td><input type="number" name="res23" id="res23"></td>
+    </tr>
+</tr>
+</table>
+</center>
+</body>
+</html>
