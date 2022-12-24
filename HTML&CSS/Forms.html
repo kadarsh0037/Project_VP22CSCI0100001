@@ -1,0 +1,509 @@
+<html>
+<head>
+<title>Student Registration Form</title>
+<script>
+function display(fullname,fname,mname,lname,gender,dob,nation,ccode,mobile,email,address,state,city,qualification,course,department,college,university,yoj,yop,username,declaration,place,currentdateandtime)
+{
+  alert("Submit Successful");  
+  document.write("-----Personal Information-----");
+  document.write("<br>");
+  document.write("Full Name :"+fullname.value);
+  document.write("<br>");
+  document.write("First Name :"+fname.value);
+  document.write("<br>");
+  document.write("Middle Name :"+mname.value);
+  document.write("<br>");
+  document.write("Last Name :"+lname.value);
+  document.write("<br>")
+  document.write("Gender :"+gender.value);
+  document.write("<br>");
+  document.write("Date of Birth :"+dob.value);
+  document.write("<br>");
+  document.write("Nationality :"+nation.value);
+  document.write("<br>");
+  document.write("Mobile Number :"+ccode.value+""+mobile.value);
+  document.write("<br>");
+  document.write("Email Address :"+email.value);
+  document.write("<br>");
+  document.write("Address :"+address.value);
+  document.write("<br>");
+  document.write("State :"+state.value);
+  document.write("<br>");
+  document.write("City :"+city.value);
+  document.write("<br>");
+  document.write("<hr/>");
+  document.write("-----Academic Information-----");
+  document.write("<br>");
+  document.write("Highest Qualification :"+qualification.value);
+  document.write("<br>");
+  document.write("Course :"+course.value);
+  document.write("<br>");
+  document.write("Department :"+department.value);
+  document.write("<br>");
+  document.write("College :"+college.value);
+  document.write("<br>");
+  document.write("University :"+university.value);
+  document.write("<br>");
+  document.write("Year of Joining :"+yoj.value);
+  document.write("<br>");
+  document.write("Year of Passing :"+yop.value);
+  document.write("<br>");
+  document.write("<hr/>");
+  document.write("-----Login Information-----");
+  document.write("<br>");
+  document.write("User Name :"+username.value);
+  document.write("<br>");
+  document.write("<hr/>");
+  document.write("-----Declaration-----");
+  document.write("<br>");
+  document.write("Declaration :"+declaration.value);
+  document.write("<br>");
+  document.write("Place of Submission :"+place.value);
+  document.write("<br>");
+  document.write("Date of Submission :"+currentdateandtime.value);
+  document.write("<br>");
+  document.write("<hr/>");
+}
+</script>
+<style>
+input[type=text]
+{
+  background-color: #66ccff;
+  color: white;
+  border-radius: 4px;
+}
+textarea
+{
+  background-color: #99ffcc;
+  color: red;
+  border-radius: 4px;
+  width: 50%;
+  height: 40px;
+}
+input[type=password]
+{
+  background-color: #ffccff;
+  color: yellow;
+  border-radius: 4px;
+}
+input[type=number]
+{
+  background-color: #ffcc99;
+  color: gray;
+  border-radius: 4px;
+}
+input[type=email]
+{
+  background-color: #ffff99;
+  color: SlateBlue;
+  border-radius: 4px;
+}
+input[type=date]
+{
+  background-color: #cc99ff;
+  color: GreenYellow;
+  border-radius: 4px;
+}
+input[type=month]
+{
+  background-color: #7fff00;
+  color: Brown;
+  border-radius: 4px;
+}
+input[type=datetime-local]
+{
+  background-color: #000080;
+  color: Lime;
+  border-radius: 4px;
+}
+input[type=submit] 
+{
+  width: 20%;
+  background-color: #cc0066;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=reset] 
+{
+  width: 20%;
+  background-color: #cc0066;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover 
+{
+  background-color: #66ffcc;
+}
+input[type=reset]:hover 
+{
+  background-color: #66ffcc;
+}
+select {
+  border-radius: 4px;
+  background-color: #daa520;
+}
+#declaration{
+ font-weight:bold;
+ font-style:italic;
+ text-decoration: underline;
+}
+table{
+ border : 4px solid red;
+ width : 50%;
+}
+td{
+ border : 2px solid blue;
+ width : 60%;
+}
+th{
+ border : 2px solid green;
+ width : 40%;
+ text-align : center;
+}
+</style>
+</head>
+<body bgcolor="#e0ffff">
+<h1 align="center">Student Registration Form</h1>
+<form name="form1">
+<center>
+<table>
+<tr>
+<th colspan=2>Personal Information</th>
+</tr>
+<tr>
+<th>
+<label for="fullname">Full Name :</label>
+</th>
+<td>
+<input type="text" id="fullname" name="fullname" placeholder="Full Name" maxlength="40" required>
+</td>
+</tr>
+<tr>
+<th>
+<label for="fname">First Name :</label>
+</th>
+<td>
+<input type="text" id="fname" name="fname" placeholder="First Name" maxlength="20" required>
+</td>
+</tr>
+<tr>
+<th>
+<label for="mname">Middle Name :</label>
+</th>
+<td>
+<input type="text" id="mname" name="mname" placeholder="Middle Name" maxlength="20">
+</td>
+</tr>
+<tr>
+<th>
+<label for="lname">Last Name :</label>
+</th>
+<td>
+<input type="text" id="lname" name="lname" placeholder="Last Name" maxlength="20" required>
+</td>
+</tr>
+<tr>
+<th>
+<p>Gender :</p>
+</th>
+<td>
+<input type="radio" id="male" name="gender" value="Male" checked>
+<label for="male">Male</label>
+<input type="radio" id="female" name="gender" value="Female">
+<label for="female">Female</label>
+</td>
+</tr>
+<tr>
+<tr>
+<th>
+<label for="dob">Date of Birth :</label>
+</th>
+<td>
+<input type="date" id="dob" name="dob" required>
+</td>
+</tr>
+<tr>
+<th>
+<label for="nation">Nationality :</label>
+</th>
+<td>
+<select name="nation" id="nation" required>
+<option value="Indian">Indian</option>
+<option value="Non Resident Indian">Non Resident Indian</option>
+</select>
+</td>
+</tr>
+<tr>
+<th>
+<label for="mobile">Mobile Number :</label>
+</th>
+<td>
+<select name="ccode" id="ccode">
+<option value="+1">+1</option>
+<option value="+44">+44</option>
+<option value="+91" selected>+91</option>
+<option value="+92">+92</option>
+<option value="+94">+94</option>
+</select>
+<input type="number" id="mobile" name="mobile" placeholder="Mobile" required>
+</td>
+</tr>
+<tr>
+<th>
+<label for="email">Email Address:</label>
+</th>
+<td>
+<input type="email" id="email" name="email" placeholder="Email" required>
+</td>
+</tr>
+<tr>
+<th>
+<p>Address Type :</p>
+</th>
+<td>
+<input type="checkbox" id="present" name="atype" value="present">
+<label for="present">Present</label>
+<input type="checkbox" id="permanent" name="atype" value="permanent"  checked>
+<label for="permanent">Permanent</label>
+</td>
+</tr>
+<tr>
+<th>
+<label for="address">Address :</label>
+</th>
+<td>
+<textarea id="address" name="address" placeholder="Enter your Address Here" required></textarea>
+</td>
+</tr>
+
+<tr>
+<th>
+<label for="state">Select your State :</label>
+</th>
+<td>
+<select name="state" id="state" required>
+<optgroup label="States">
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Bihar">Bihar</option>
+<option value="Chattisgarh">Chattisgarh</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jharkand">Jharkand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Odisha">Odisha</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Telangana">Telangana</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttarakhand">Uttarakhand</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="West Bengal">West Bengal</option>
+<optgroup label="Union Territories">
+<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+<option value="Chandigarh">Chandigarh</option>
+<option value="Dadra and Nagar Haveli and
+Daman & Diu">Dadra and Nagar Haveli and
+Daman & Diu</option>
+<option value="The Government of NCT of Delhi">The Government of NCT of Delhi</option>
+<option value="Jammu & Kashmir">Jammu & Kashmir</option>
+<option value="Ladakh">Ladakh</option>
+<option value="Lakshadweep">Lakshadweep</option>
+<option value="Puducherry">Puducherry</option>
+</select>
+</tr>
+<th>
+<label for="city">Select your City :</label>
+</th>
+<td>
+<select name="city" id="city" required>
+<option value="Hyderabad">Hyderabad</option>
+<option value="Vijayawada">Vijayawada</option>
+<option value="Bangalore">Bangalore</option>
+<option value="Chennai">Chennai</option>
+</select>
+</tr>
+<tr>
+<th colspan=2>Academic Information</th>
+</tr>
+<tr>
+<th>
+<label for="qualification">Select your Current Qualification :</label>
+</th>
+<td>
+<select name="qualification" id="qualification" required>
+<option value="Doctorate Degree">Doctorate Degree</option>
+<option value="Post Graduation">Post Graduation</option>
+<option value="Under Graduation">Under Graduation</option>
+<option value="Intermediate/HSC">Intermediate/HSC</option>
+<option value="SSC">SSC</option>
+<option value="Below SSC">Below SSC</option>
+</select>
+</td>
+</tr>
+<tr>
+<th>
+<label for="course">Name of the Course :</label>
+</th>
+<td>
+<select name="course" id="course" required>
+<option value="MCA">MCA</option>
+<option value="MBA">MBA</option>
+<option value="M.Sc">M.Sc</option>
+</select>
+</td>
+</tr>
+<tr>
+<th>
+<label for="department">Name of the Department :</label>
+</th>
+<td>
+<select name="department" id="department" required>
+<option value="Mathematics">Mathematics</option>
+<option value="Computer Science">Computer Science</option>
+<option value="Physics">Physics</option>
+</select>
+</td>
+</tr>
+<tr>
+<th>
+<label for="college">Name of the College :</label>
+</th>
+<td>
+<select name="college" id="college" required>
+<option value="Gitam School of Technology">Gitam School of Technology</option>
+<option value="Gitam School of Science">Gitam School of Science</option>
+<option value="Gitam School of Law">Gitam School of Law</option>
+<option value="Gitam School of Business">Gitam School of Business</option>
+<option value="Gitam School of Architecture">Gitam School of Architecture</option>
+</select>
+</td>
+</tr>
+<tr>
+<th>
+<label for="university">Name of the University :</label>
+</th>
+<td>
+<select name="university" id="university" required>
+<option value="Gitam University">Gitam University</option>
+<option value="KL University">KL University</option>
+<option value="Sri Venkateswara University">Sri Venkateswara University</option>
+<option value="Andhra University">Andhra University</option>
+<option value="Osmania University">Osmania University</option>
+</select>
+</td>
+</tr>
+<tr>
+<th>
+<label for="yoj">Year of Joining :</label>
+</th>
+<td>
+<select name="yoj" id="yoj" required>
+<option value="2010">2010</option>
+<option value="2011">2011</option>
+<option value="2012">2012</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+<option value="2019">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
+</select>
+</td>
+</tr>
+<tr>
+<th>
+<label for="yop">Year of Passing :</label>
+</th>
+<td>
+<select name="yop" id="yop" required>
+<option value="2010">2010</option>
+<option value="2011">2011</option>
+<option value="2012">2012</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+<option value="2019">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
+<option value="2023">2023</option>
+<option value="2024">2024</option>
+</select>
+</td>
+</tr>
+<tr>
+<th>
+<p>Technical Skills :</p>
+</th>
+<td>
+<input type="checkbox" id="C" name="tech" value="C">
+<label for="C>C</label>
+<input type="checkbox" id="C++" name="tech" value="C++">
+<label for="C++">C++</label>
+<input type="checkbox" id="Java" name="tech" value="Java">
+<label for="Java">Java</label>
+<input type="checkbox" id="Oracle" name="tech" value="Oracle">
+<label for="Oracle">Oracle</label>
+<input type="checkbox" id="Python" name="tech" value="Python">
+<label for="Python">Python</label>
+<input type="checkbox" id="HTML" name="tech" value="HTML">
+<label for="HTML">HTML</label>
+</td>
+</tr>
+<tr>
+<th colspan=2>Login Information</th>
+</tr>
+<tr>
+<th>
+<label for="username">User Name :</label>
+</th>
+<td>
+<input type="text" id="username" name="username" placeholder="User Name" required></td>
+</tr>
+<tr>
+<th>
+<label for="pwd">Password :</label>
+</th>
+<td>
+<input type="password" id="pwd" name="pwd" placeholder="Password" required>
+</td>
+</tr>
+</table>
+<p id="declaration">Declaration :</p>
+<p>I hereby declare that all the details provided by me above are correct upto my Knowledge.</p>
+<input type="radio" id="agree" name="declaration" value="Agree" checked>
+<label for="agree">Agree</label>
+<input type="radio" id="disagree" name="declaration" value="Disagree">
+<label for="disagree">Disagree</label><br><br>
+<label for="place">Place :</label>
+<input type="text" id="place" name="place" placeholder="Place" required><br><br>
+<label for="current date and time">Current Date and Time :</label>
+<input type="datetime-local" id="currentdateandtime" name="currentdateandtime" required><br><br>
+<input type="submit" onclick="display(fullname,fname,mname,lname,gender,dob,nation,ccode,mobile,email,address,state,city,qualification,course,department,college,university,yoj,yop,username,declaration,place,currentdateandtime);" value="Submit">
+<input type="reset" onclick="alert('Reset Successful')" value="Reset">
+</center>
+</form>
+</body>
+</html>
