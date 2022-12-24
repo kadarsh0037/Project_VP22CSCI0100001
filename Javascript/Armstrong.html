@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Armstrong or Not</title>
+<script>
+function armstrong()
+{
+	var number = document.getElementById("num").value;
+    var result,rem,sum=0;
+    var num = number;
+    const len = num.length;
+    while(num>0)
+    {
+        rem = num % 10;
+        num = parseInt(num / 10);
+        sum = sum + rem ** len;
+    }
+    if(number == sum)
+    {
+        result = "Armstrong Number";
+    }
+    else
+    {
+        result = "Not Armstrong Number";
+    }
+	document.getElementById("res").value = result;
+}
+</script>
+<style>
+h2
+{
+    text-align:center;
+    color:chocolate;
+    background-color:aqua;
+}
+table,th,td
+{
+    border: 1px solid black;
+}
+table
+{
+    width:80%;
+    border-collapse: collapse;
+}
+td
+{
+	align-items: center;
+    text-align:center;
+}
+button
+{
+	color: #B22222;
+  	background-color:#DAA520;
+  	border-radius: 50px;
+  	height: 2em;
+  	width: 7em;
+  	font-size:medium;
+  	font-weight: 200;
+	cursor: pointer;
+}
+button:hover
+{
+  background-color: #66ffcc;
+}
+</style>
+</head>
+<body>
+<h2>Javascript Operations</h2>
+<center>
+<table>
+    <tr>
+        <th>Operation</th>
+        <th colspan="2">Inputs</th>
+        <th>Calculation</th>
+        <th>Result</th>
+    </tr>
+    <tr>
+        <th>Armstrong or Not</th>
+        <td colspan="2"><input type="number" name="num" id="num" placeholder="Number"></td>
+        <td><button onclick="armstrong();">Calculate</button></td>
+        <td><input type="text" name="res" id="res"></td>
+    </tr>
+</table>
+</center>
+</body>
+</html>
